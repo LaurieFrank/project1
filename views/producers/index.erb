@@ -3,7 +3,9 @@
 <% for producer in @producers %>
   <p> ID: <%= producer.id %></p>
   <p> Producer: <%= producer.producer_name %></p>
-  <p> Product: <%= producer.cocktail_items.first.product_name %></p>
+<% for cocktail_item in producer.cocktail_items %>
+  <p> Product: <%= cocktail_item.product_name %></p>
+<% end %>
   <hr>
 
 <% end %>

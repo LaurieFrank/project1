@@ -13,3 +13,8 @@ get '/cocktail-items/new' do
   @producers = Producer.all
   erb(:"cocktail_items/new")
 end
+
+post '/cocktail-items' do
+  CocktailItem.new(params).save
+  redirect to '/cocktail-items'
+end
