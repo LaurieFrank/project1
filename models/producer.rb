@@ -40,4 +40,8 @@ class Producer
     SqlRunner.run(sql)
   end
 
+  # def self.map_items(producer_data)
+  #   return producer_data.map { |producer| Producer.new(producer)}
+  # end
+
 end

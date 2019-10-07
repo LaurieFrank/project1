@@ -40,28 +40,32 @@ class CocktailItem
   #   SqlRunner.run(sql, values)
   # end
 
-  def update()
-    sql = "UPDATE cocktail_items SET
-    (
-      product_name,
-      description,
-      quantity,
-      buy_cost,
-      sell_price,
-      producer_id
-    ) =
-    (
-      $1, $2, $3, $4, $5, $6
-    )
-    WHERE id = $7"
-    values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
-    @producer_id]
-    SqlRunner.run(sql, values)
-  end
+  # def update()
+  #   sql = "UPDATE cocktail_items SET
+  #   (
+  #     product_name,
+  #     description,
+  #     quantity,
+  #     buy_cost,
+  #     sell_price,
+  #     producer_id
+  #   ) =
+  #   (
+  #     $1, $2, $3, $4, $5, $6
+  #   )
+  #   WHERE id = $7"
+  #   values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
+  #   @producer_id]
+  #   SqlRunner.run(sql, values)
+  # end
 
   def self.delete_all()
     sql = "DELETE FROM cocktail_items"
     SqlRunner.run(sql)
   end
+
+  # def self.map_items(cocktail_items_data)
+  #   return cocktail_items_data.map { |cocktail_item| CocktailItem.new(cocktail_item)}
+  # end
 
 end
