@@ -27,6 +27,12 @@ class Producer
   #   sql = "DELETE FROM producers WHERE id = $1"
   #   values = [@id]
   #   SqlRunner.run(sql, values)
+
+  # def update()
+  #   sql = "UPDATE producers SET (producer_name) = ($1)
+  #     where id = $2"
+  #     values = [@producer_id]
+  #     SqlRunner.run(sql, values)
   # end
 
   def self.delete_all()

@@ -34,10 +34,28 @@ class CocktailItem
     @id = result.first["id"].to_i()
   end
 
+  # def delete()
+  #   sql = "DELETE FROM cocktail_items WHERE id = $1"
+  #   values = [@id]
+  #   SqlRunner.run(sql, values)
+  # end
 
-  def delete()
-    sql = "DELETE FROM cocktail_items WHERE id = $1"
-    values = [@id]
+  def update()
+    sql = "UPDATE cocktail_items SET
+    (
+      product_name,
+      description,
+      quantity,
+      buy_cost,
+      sell_price,
+      producer_id
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
+    @producer_id]
     SqlRunner.run(sql, values)
   end
 
