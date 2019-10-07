@@ -40,6 +40,14 @@ class Producer
     SqlRunner.run(sql)
   end
 
+  # def self.find(id)
+  #   sql = "SELECT * FROM producers WHERE if = $1"
+  #   values = [id]
+  #   result = SqlRunner.run(sql, values).first
+  #   producer = Producer.new(result)
+  #   return producer
+  # end
+
   # def self.all()
   #   sql = "SELECT * FROM producers"
   #   producer_data = SqlRunner.run(sql)

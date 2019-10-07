@@ -66,6 +66,14 @@ class CocktailItem
   #   return cocktail_items
   # end
 
+  # def self.find(id)
+  #   sql = "SELECT * FROM cocktail_items WHERE if = $1"
+  #   values = [id]
+  #   result = SqlRunner.run(sql, values).first
+  #   cocktail_item = Producer.new(result)
+  #   return cocktail_item
+  # end
+
   def self.delete_all()
     sql = "DELETE FROM cocktail_items"
     SqlRunner.run(sql)
