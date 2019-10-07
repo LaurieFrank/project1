@@ -40,6 +40,13 @@ class Producer
     SqlRunner.run(sql)
   end
 
+  # def self.all()
+  #   sql = "SELECT * FROM producers"
+  #   producer_data = SqlRunner.run(sql)
+  #   producers = map_items(producer_data)
+  #   return producers
+  # end
+
   # def self.map_items(producer_data)
   #   return producer_data.map { |producer| Producer.new(producer)}
   # end

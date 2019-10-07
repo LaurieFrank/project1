@@ -59,6 +59,13 @@ class CocktailItem
   #   SqlRunner.run(sql, values)
   # end
 
+  # def self.all()
+  #   sql = "SELECT * FROM cocktail_items"
+  #   cocktail_item_data = SqlRunner.run(sql)
+  #   cocktail_items = map_items(cocktail_item_data)
+  #   return cocktail_items
+  # end
+
   def self.delete_all()
     sql = "DELETE FROM cocktail_items"
     SqlRunner.run(sql)
