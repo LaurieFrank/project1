@@ -13,5 +13,5 @@ CREATE TABLE cocktail_items (
   quantity INT8,
   buy_cost INT8,
   sell_price INT8,
-  producer_id INT8 REFERENCES producers(id)
+  producer_id INT8 REFERENCES producers(id) ON DELETE CASCADE
 );

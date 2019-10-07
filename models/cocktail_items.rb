@@ -12,7 +12,7 @@ class CocktailItem
     @quantity = options['quality'].to_i()
     @buy_cost = options['buy_cost'].to_i()
     @sell_price = options['sell_price'].to_i()
-    @producer_id = options['producer_id'].to.i()
+    @producer_id = options['producer_id'].to_i()
   end
 
   def save()
@@ -34,53 +34,61 @@ class CocktailItem
     @id = result.first["id"].to_i()
   end
 
-  # def delete()
-  #   sql = "DELETE FROM cocktail_items WHERE id = $1"
-  #   values = [@id]
-  #   SqlRunner.run(sql, values)
-  # end
+  def delete()
+    sql = "DELETE FROM cocktail_items WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
-  # def update()
-  #   sql = "UPDATE cocktail_items SET
-  #   (
-  #     product_name,
-  #     description,
-  #     quantity,
-  #     buy_cost,
-  #     sell_price,
-  #     producer_id
-  #   ) =
-  #   (
-  #     $1, $2, $3, $4, $5, $6
-  #   )
-  #   WHERE id = $7"
-  #   values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
-  #   @producer_id]
-  #   SqlRunner.run(sql, values)
-  # end
+  def update()
+    sql = "UPDATE cocktail_items SET
+    (
+      product_name,
+      description,
+      quantity,
+      buy_cost,
+      sell_price,
+      producer_id
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
+    @producer_id]
+    SqlRunner.run(sql, values)
+  end
 
-  # def self.all()
-  #   sql = "SELECT * FROM cocktail_items"
-  #   cocktail_item_data = SqlRunner.run(sql)
-  #   cocktail_items = map_items(cocktail_item_data)
-  #   return cocktail_items
-  # end
+  def producer
+    sql = "SELECT * FROM producers WHERE id = $1"
+    values = [@producer_id]
+    producer_data = SqlRunner.run(sql, values)
+    producers = Producer.map_items(producer_data)
+    return producers
+  end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM cocktail_items WHERE if = $1"
-  #   values = [id]
-  #   result = SqlRunner.run(sql, values).first
-  #   cocktail_item = Producer.new(result)
-  #   return cocktail_item
-  # end
+  def self.all()
+    sql = "SELECT * FROM cocktail_items"
+    cocktail_item_data = SqlRunner.run(sql)
+    cocktail_items = map_items(cocktail_item_data)
+    return cocktail_items
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM cocktail_items WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    cocktail_item = CocktailItem.new(result)
+    return cocktail_item
+  end
 
   def self.delete_all()
     sql = "DELETE FROM cocktail_items"
     SqlRunner.run(sql)
   end
 
-  # def self.map_items(cocktail_items_data)
-  #   return cocktail_items_data.map { |cocktail_item| CocktailItem.new(cocktail_item)}
-  # end
+  def self.map_items(cocktail_items_data)
+    return cocktail_items_data.map { |cocktail_item| CocktailItem.new(cocktail_item)}
+  end
 
 end

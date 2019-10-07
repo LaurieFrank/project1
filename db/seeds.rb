@@ -1,19 +1,20 @@
 require_relative("../models/cocktail_items.rb")
 require_relative("../models/producer.rb")
+require("pry")
 
 Producer.delete_all()
 CocktailItem.delete_all()
 
 producer1 = Producer.new({
-  "name" => "Kraken"
+  "producer_name" => "Kraken"
   })
 
 producer2 = Producer.new({
-  "name" => "Wrecking Coast"
+  "producer_name" => "Wrecking Coast"
   })
 
 producer3 = Producer.new({
-  "name" => "Best Cocktail Kit"
+  "producer_name" => "Best Cocktail Kit"
   })
 
 producer1.save()
@@ -74,3 +75,6 @@ cocktail_item2.save()
 cocktail_item3.save()
 cocktail_item4.save()
 cocktail_item5.save()
+
+binding.pry
+nil
