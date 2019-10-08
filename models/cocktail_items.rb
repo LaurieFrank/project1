@@ -59,12 +59,16 @@ class CocktailItem
     SqlRunner.run(sql, values)
   end
 
-  def producer
+  def producer()
     sql = "SELECT * FROM producers WHERE id = $1"
     values = [@producer_id]
     producer_data = SqlRunner.run(sql, values)
     producers = Producer.map_items(producer_data)
     return producers
+  end
+
+  def low_stock()
+      return @quantity <= 2
   end
 
   def self.all()

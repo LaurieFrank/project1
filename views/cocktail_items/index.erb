@@ -7,5 +7,6 @@
   <p> Buy Cost: <%= cocktail_item.buy_cost %></p>
   <p> Sell Price: <%= cocktail_item.sell_price %></p>
   <p> Producer: <%= cocktail_item.producer.first.producer_name %></p>
+  <p><%= "LOW STOCK" if cocktail_item.low_stock%></p>
 <hr>
 <% end %>
