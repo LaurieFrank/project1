@@ -2,3 +2,4 @@
 <p>Producer Name: <%= @producers.producer_name %></p>
 <p>ID: <%= @producers.id %></p>
 <a href="/producers/<%= @producers.id %>/edit">Edit Producer</a>
+<form action="/producers/<%= @producers.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

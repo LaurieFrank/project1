@@ -33,3 +33,9 @@ get '/producers/:id' do
   @producers = Producer.find(params['id'])
   erb(:"producers/show")
 end
+
+post '/producers/:id/delete' do
+  producer = Producer.find(params['id'])
+  producer.delete
+  redirect to '/producers'
+end

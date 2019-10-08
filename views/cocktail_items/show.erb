@@ -6,3 +6,5 @@
 <p> Buy Cost: <%= @cocktail_item.buy_cost %></p>
 <p> Sell Price: <%= @cocktail_item.sell_price %></p>
 <p> Producer: <%= @cocktail_item.producer.first.producer_name %></p>
+<a href="/cocktail-items/<%= @cocktail_item.id %>/edit">Edit Item</a>
+<form action="/cocktail_items/<%= @cocktail_item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
