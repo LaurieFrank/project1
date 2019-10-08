@@ -18,3 +18,8 @@ post '/cocktail-items' do
   CocktailItem.new(params).save
   redirect to '/cocktail-items'
 end
+
+get '/cocktail-items/:id'  do
+  @cocktail_item = CocktailItem.find(params['id'])
+  erb(:"cocktail_items/show")
+end

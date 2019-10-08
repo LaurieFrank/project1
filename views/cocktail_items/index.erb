@@ -1,13 +1,11 @@
 <h1>Cocktail Items</h1>
 
 <% for cocktail_item in @cocktail_items %>
-  <p> ID: <%= cocktail_item.id %></p>
-  <p> Product Name: <%= cocktail_item.product_name %></p>
+  <p> Product Name: <a href="/cocktail-items/<%= cocktail_item.id %>"><%= cocktail_item.product_name %></p></a>
   <p> Description: <%= cocktail_item.description %></p>
   <p> Quantity: <%= cocktail_item.quantity %></p>
   <p> Buy Cost: <%= cocktail_item.buy_cost %></p>
   <p> Sell Price: <%= cocktail_item.sell_price %></p>
   <p> Producer: <%= cocktail_item.producer.first.producer_name %></p>
-  <hr>
-
+<hr>
 <% end %>

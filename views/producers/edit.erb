@@ -1,0 +1,8 @@
+<h2>Edit a Producer: <%= @producers.producer_name %></h2>
+
+<form action="/producers/<%= @producers.id %>" method="post">
+ <label for="producer_name">Producer Name:</label>
+ <input type="text" name="producer_name" id="producer_name" value="<%= @producers.producer_name %>">
+
+  <input type="submit" value="Update Producer">
+</form>

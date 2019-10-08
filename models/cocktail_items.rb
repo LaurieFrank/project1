@@ -9,7 +9,7 @@ class CocktailItem
     @id = options['id'].to_i if options['id']
     @product_name = options['product_name']
     @description = options['description']
-    @quantity = options['quality'].to_i()
+    @quantity = options['quantity'].to_i()
     @buy_cost = options['buy_cost'].to_i()
     @sell_price = options['sell_price'].to_i()
     @producer_id = options['producer_id'].to_i()
@@ -55,7 +55,7 @@ class CocktailItem
     )
     WHERE id = $7"
     values = [@product_name, @description, @quantity, @buy_cost, @sell_price,
-    @producer_id]
+    @producer_id, @id]
     SqlRunner.run(sql, values)
   end
 

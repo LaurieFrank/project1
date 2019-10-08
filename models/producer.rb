@@ -32,7 +32,7 @@ class Producer
   def update()
     sql = "UPDATE producers SET producer_name = $1
       where id = $2"
-      values = [@producer_name]
+      values = [@producer_name, @id]
       SqlRunner.run(sql, values)
   end
 
@@ -45,7 +45,7 @@ class Producer
   end
 
   def self.delete_all()
-    sql = "DELETE FROM cocktail_items"
+    sql = "DELETE FROM producers"
     SqlRunner.run(sql)
   end
 
