@@ -7,5 +7,5 @@
 <p> Sell Price: <%= @cocktail_item.sell_price %></p>
 <p> Producer: <%= @cocktail_item.producer.first.producer_name %></p>
 <p><%= "LOW STOCK" if @cocktail_item.low_stock%></p>
-<a href="/cocktail-items/<%= @cocktail_item.id %>/edit">Edit Item</a>
+<button class="button"><a href="/cocktail-items/<%= @cocktail_item.id %>/edit">Edit Item</a></button>
 <form action="/cocktail_items/<%= @cocktail_item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

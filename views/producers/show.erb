@@ -1,5 +1,5 @@
 <h2>Producer</h2>
 <p>Producer Name: <%= @producers.producer_name %></p>
 <p>ID: <%= @producers.id %></p>
-<a href="/producers/<%= @producers.id %>/edit">Edit Producer</a>
+<button class="button"><a href="/producers/<%= @producers.id %>/edit">Edit Item</a></button>
 <form action="/producers/<%= @producers.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
