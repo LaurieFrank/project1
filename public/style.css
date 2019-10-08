@@ -1,0 +1,32 @@
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.button {
+  background-color: #ff9999;
+  color: #1E90FF;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 10%;
+}
+
+.button a:active {
+top: 2px;
+display: block;
+}
+
+input[type=submit] {
+  background-color: #ff9999;
+  color: #1E90FF;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 10%;
+}
+
+input[type=submit] a:active {
+top: 2px;
+display: block;
+}
