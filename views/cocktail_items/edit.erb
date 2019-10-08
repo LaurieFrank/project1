@@ -17,13 +17,12 @@
  <input type="number" name="sell_price" id="sell_price" value="<%= @cocktail_items.sell_price %>">
 
  <label for="select_producer">Producer Name:</label>
-  <select name="producer_id" id="select_producer"
-    selected="<%= @cocktail_items.producer_id %>">
+  <select name="producer_id" id="select_producer">
     <% @producers.each do |producer| %>
     <% if producer.id == @cocktail_items.producer_id %>
       <option value=<%= producer.id %> selected><%= producer.producer_name.capitalize %></option>
     <% else %>
-      <option value=<% producer.id %>><% producer.producer_name.capitalize %></option>
+      <option value=<%= producer.id %>><%= producer.producer_name.capitalize %></option>
       <% end %>
     <% end %>
   </select>
