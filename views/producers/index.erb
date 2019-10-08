@@ -1,11 +1,17 @@
-<h1>Cocktail Item Producers</h1>
+<h2>Cocktail Item Producers</h2>
 
-<% for producer in @producers %>
-  <p><a href="/producers/<%= producer.id %>"><%= producer.producer_name %></p></a>
-<% for cocktail_item in producer.cocktail_items %>
-  <p> Product: <%= cocktail_item.product_name %></p>
-<% end %>
+<table style="width:100%">
+  <tr>
+    <th>Producer Name</th>
+    <th>Products</th>
+  </tr>
+  <% for producer in @producers %>
+  <tr>
+    <td><a href="/producers/<%= producer.id %>"><%= producer.producer_name %></a></td>
+    <td> <% for cocktail_item in producer.cocktail_items %>
+      <%= cocktail_item.product_name %> |
+    <% end %>
+    </td>
+  <% end %>
 
-  <hr>
-
-<% end %>
+</table>
