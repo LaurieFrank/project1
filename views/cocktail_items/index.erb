@@ -1,4 +1,4 @@
-<h2>Cocktail Items</h2>
+<h1>Cocktail Items</h1>
 
 <table style="width:100%">
   <tr>
@@ -14,7 +14,10 @@
 <% for cocktail_item in @cocktail_items %>
   <tr>
     <td><a href="/cocktail-items/<%= cocktail_item.id %>"><%= cocktail_item.product_name %></td>
-    <td><%= cocktail_item.description %></td>
+    <td><% for word in cocktail_item.description.split(".")   %>
+        <%= word %><br>
+        <% end  %>
+    </td>
     <td><%= cocktail_item.quantity %></td>
     <td><%= cocktail_item.buy_cost %></td>
     <td><%= cocktail_item.sell_price %></td>

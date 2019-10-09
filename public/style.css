@@ -9,6 +9,10 @@ body {
   height: auto;
 }
 
+a:link {
+  color: #1E90FF;
+}
+
 .button {
   background-color: #ff9999;
   color: #1E90FF;
@@ -38,7 +42,7 @@ display: block;
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
 }
 
 h1 {
