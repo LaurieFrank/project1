@@ -15,7 +15,7 @@
   <tr>
     <td><a href="/cocktail-items/<%= cocktail_item.id %>"><%= cocktail_item.product_name %></td>
     <td><% for word in cocktail_item.description.split(".")   %>
-        <%= word %><br>
+        <%= word %>.<br>
         <% end  %>
     </td>
     <td><%= cocktail_item.quantity %></td>
