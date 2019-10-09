@@ -25,7 +25,7 @@ cocktail_item1 = CocktailItem.new({
   "product_name" => "Boston Cocktail Shaker",
   "description" => "Professional quality cocktail shaker. Simple to use - no
   need to worry about unfastening various lids and strainers.",
-  "quantity" => 3,
+  "quantity" => 2,
   "buy_cost" => 580,
   "sell_price" => 750,
   "producer_id" => producer3.id
@@ -36,7 +36,7 @@ cocktail_item2 = CocktailItem.new({
   "description" => "Doubled-ended alcohol measure: One side measures single shots
    (25 ml), the other doubles (50 ml). The cocktail jigger is made of durable,
    rust-resistant, food-safe stainless steel.",
-  "quantity" => 3,
+  "quantity" => 0,
   "buy_cost" => 390,
   "sell_price" => 520,
   "producer_id" => producer3.id

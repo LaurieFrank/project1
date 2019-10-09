@@ -67,9 +67,18 @@ class CocktailItem
     return producers
   end
 
-  def low_stock()
-    return @quantity <= 2
+  def stock_level()
+    return "LOW STOCK" if @quantity <= 3 && @quantity > 0
+    return "NO STOCK" if @quantity == 0
   end
+
+  # def low_stock()
+  #   return "NO STOCK" if @quantity <= 2
+  # end
+  #
+  # def no_stock()
+  #   return @quantity == 0
+  # end
 
   # def split_description
   #   return @description.each_line(".\n")

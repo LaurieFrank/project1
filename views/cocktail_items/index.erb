@@ -23,7 +23,7 @@
     <td>£<%= cocktail_item.convert_price_sell %></td>
     <td>£<%= cocktail_item.mark_up.round(2) %></td>
     <td><%= cocktail_item.producer.first.producer_name %></td>
-    <td><%= "LOW STOCK" if cocktail_item.low_stock%></td>
+    <td><%= cocktail_item.stock_level()%></td>
   </tr>
   <% end %>
 </table>
