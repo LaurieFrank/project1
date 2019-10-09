@@ -45,22 +45,23 @@ h1 {
   text-align: center;
 }
 
-.navbar {
+/* .navbar {
   bottom: 0px;
   width: 100%;
   position: absolute;
   overflow: hidden;
   justify-content: center;
-}
+} */
 
-/* .navbar {
+.navbar {
     left:0;
     bottom:10px;
     text-align:center;
     width:100%;
     padding: 5px;
     line-height: 1.2;
-} */
+}
+
 ul {
   margin: 30px auto;
   text-align: center;
