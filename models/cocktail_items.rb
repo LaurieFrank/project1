@@ -72,28 +72,16 @@ class CocktailItem
     return "NO STOCK" if @quantity == 0
   end
 
-  # def low_stock()
-  #   return "NO STOCK" if @quantity <= 2
-  # end
-  #
-  # def no_stock()
-  #   return @quantity == 0
-  # end
-
-  # def split_description
-  #   return @description.each_line(".\n")
-  # end
-
-  def mark_up()
-    convert_price_sell - convert_price_buy
-  end
-
   def convert_price_buy()
     @buy_cost/100.0
   end
 
   def convert_price_sell()
     @sell_price/100.0
+  end
+
+  def mark_up()
+    convert_price_sell - convert_price_buy
   end
 
   def self.all()
