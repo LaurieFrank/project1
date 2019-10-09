@@ -68,11 +68,15 @@ class CocktailItem
   end
 
   def low_stock()
-      return @quantity <= 2
+    return @quantity <= 2
   end
 
-  def split_description
-    return @description.each_line(".\n")
+  # def split_description
+  #   return @description.each_line(".\n")
+  # end
+
+  def mark_up()
+    @sell_price - @buy_cost
   end
 
   def self.all()

@@ -26,8 +26,8 @@ cocktail_item1 = CocktailItem.new({
   "description" => "Professional quality cocktail shaker. Simple to use - no
   need to worry about unfastening various lids and strainers.",
   "quantity" => 3,
-  "buy_cost" => 750,
-  "sell_price" => 580,
+  "buy_cost" => 580,
+  "sell_price" => 750,
   "producer_id" => producer3.id
   })
 
@@ -37,8 +37,8 @@ cocktail_item2 = CocktailItem.new({
    (25 ml), the other doubles (50 ml). The cocktail jigger is made of durable,
    rust-resistant, food-safe stainless steel.",
   "quantity" => 3,
-  "buy_cost" => 520,
-  "sell_price" => 390,
+  "buy_cost" => 390,
+  "sell_price" => 520,
   "producer_id" => producer3.id
   })
 
@@ -47,8 +47,8 @@ cocktail_item3 = CocktailItem.new({
   "description" => "Hawthorn Stainless Steel Strainer. 4 Prong. Use with a Boston
   Cocktail Shaker.",
   "quantity" => 3,
-  "buy_cost" => 490,
-  "sell_price" => 385,
+  "buy_cost" => 385,
+  "sell_price" => 490,
   "producer_id" => producer3.id
   })
 
