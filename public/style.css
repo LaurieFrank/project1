@@ -1,6 +1,12 @@
 table, th, td {
   border: 1px solid black;
   padding: 5px;
+  display: relative;
+  overflow: hidden;
+}
+
+body {
+  height: auto;
 }
 
 .button {
@@ -29,4 +35,50 @@ input[type=submit] {
 input[type=submit] a:active {
 top: 2px;
 display: block;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.navbar {
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* .navbar {
+    left:0;
+    bottom:10px;
+    text-align:center;
+    width:100%;
+    padding: 5px;
+    line-height: 1.2;
+} */
+ul {
+  margin: 30px auto;
+  text-align: center;
+}
+
+li {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+
+  /* align-items: center; */
+}
+
+.image {
+  width: 893px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

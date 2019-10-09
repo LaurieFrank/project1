@@ -71,6 +71,10 @@ class CocktailItem
       return @quantity <= 2
   end
 
+  def split_description
+    return @description.each_line(".\n")
+  end
+
   def self.all()
     sql = "SELECT * FROM cocktail_items"
     cocktail_item_data = SqlRunner.run(sql)
