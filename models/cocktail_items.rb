@@ -79,6 +79,14 @@ class CocktailItem
     @sell_price - @buy_cost
   end
 
+  def convert_price()
+    @buy_cost/100
+  end
+
+  def convert_price_decimal()
+    @buy_cost%100
+  end
+
   def self.all()
     sql = "SELECT * FROM cocktail_items"
     cocktail_item_data = SqlRunner.run(sql)
