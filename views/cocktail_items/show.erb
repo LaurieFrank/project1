@@ -1,11 +1,30 @@
 <h2>Cocktail Item:</h2>
-<p> ID: <%= @cocktail_item.id %></p>
-<p> Product Name: <%= @cocktail_item.product_name %></p>
-<p> Description: <%= @cocktail_item.description %></p>
-<p> Quantity: <%= @cocktail_item.quantity %></p>
-<p> Buy Cost: <%= @cocktail_item.buy_cost %></p>
-<p> Sell Price: <%= @cocktail_item.sell_price %></p>
-<p> Producer: <%= @cocktail_item.producer.first.producer_name %></p>
-<p><%= "LOW STOCK" if @cocktail_item.low_stock%></p>
+
+<table style="width:100%">
+<tr>
+  <th>Product Name</th>
+  <th>Description</th>
+  <th>Quantity</th>
+  <th>Buy Cost</th>
+  <th>Sell Price</th>
+  <th>Mark Up</th>
+  <th>Producer</th>
+  <th>Stock Level</th>
+</tr>
+  <tr>
+    <td><%= @cocktail_item.product_name %></td>
+    <td><% for word in @cocktail_item.description.split(".")   %>
+        <%= word %>.<br>
+        <% end  %>
+    </td>
+    <td><%= @cocktail_item.quantity %></td>
+    <td>£<%= @cocktail_item.convert_price_buy %></td>
+    <td>£<%= @cocktail_item.convert_price_sell %></td>
+    <td>£<%= @cocktail_item.mark_up.round(2) %></td>
+    <td><%= @cocktail_item.producer.first.producer_name %></td>
+    <td><%= "LOW STOCK" if @cocktail_item.low_stock%></td>
+  </tr>
+</table>
+<br>
 <button class="button"><a href="/cocktail-items/<%= @cocktail_item.id %>/edit">Edit Item</a></button>
 <form action="/cocktail_items/<%= @cocktail_item.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
