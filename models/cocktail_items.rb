@@ -84,7 +84,7 @@ class CocktailItem
   end
 
   def convert_price_sell()
-    @buy_cost/100.0
+    @sell_price/100.0
   end
 
   def self.all()
