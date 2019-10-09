@@ -79,7 +79,7 @@ class CocktailItem
     @sell_price - @buy_cost
   end
 
-  def convert_price()
+  def convert_price_buy()
     @buy_cost/100.0
   end
 
