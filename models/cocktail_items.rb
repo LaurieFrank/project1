@@ -76,7 +76,7 @@ class CocktailItem
   # end
 
   def mark_up()
-    @sell_price - @buy_cost
+    convert_price_sell - convert_price_buy
   end
 
   def convert_price_buy()
