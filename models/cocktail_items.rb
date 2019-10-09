@@ -80,11 +80,7 @@ class CocktailItem
   end
 
   def convert_price()
-    @buy_cost/100
-  end
-
-  def convert_price_decimal()
-    @buy_cost%100
+    @buy_cost/100.0
   end
 
   def self.all()
